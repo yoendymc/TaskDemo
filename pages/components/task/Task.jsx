@@ -8,7 +8,7 @@ const Task = ({ classTr, classTd, data }) => {
 
   const onDelete = (event) => {
     event.stopPropagation();
-    taskContext.onDeleteElement(data.id);
+      data && taskContext.onDeleteElement(data.id);
   };
 
   const onSelect = () => {
@@ -17,10 +17,10 @@ const Task = ({ classTr, classTd, data }) => {
 
   return (
     <tr className={classTr} onClick={onSelect}>
-      <td className={classTd}>{data.id}</td>
-      <td className={classTd}>{data.name}</td>
-      <td className={classTd}>{data.description}</td>
-      <td className={classTd}>{data.time}</td>
+      <td className={classTd}>{data?.id}</td>
+      <td className={classTd}>{data?.name}</td>
+      <td className={classTd}>{data?.description}</td>
+      <td className={classTd}>{data?.time}</td>
       <td className={classTd}>
         <div className={taskCss.action}>
           <div className={taskCss.close} onClick={onDelete} />
