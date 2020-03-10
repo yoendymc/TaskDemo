@@ -20,7 +20,7 @@ const List = () => {
           </tr>
         </thead>
         <tbody className={listCss.tbody}>
-          {taskContext.listTask.map((l, k) => (
+          {taskContext.listTask?.map((l, k) => (
             <Task key={k} classTr={listCss.tr} classTd={listCss.td} data={l} />
           ))}
         </tbody>

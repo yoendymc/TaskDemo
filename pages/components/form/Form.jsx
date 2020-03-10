@@ -21,22 +21,22 @@ const FormTodo = ({ defaultValue }) => {
           type="text"
           name="name"
           placeholder="Name"
-          defaultValue={defaultValue.name}
+          defaultValue={defaultValue?.name}
         />
         <input required
           type="text"
           name="description"
           placeholder="Description"
-          defaultValue={defaultValue.description}
+          defaultValue={defaultValue?.description}
         />
         <input required
           type="time"
           name="time"
           min="00:10"
           max="24:00"
-          defaultValue={defaultValue.time}
+          defaultValue={defaultValue?.time}
         />
-        <input type="hidden" name="id" defaultValue={defaultValue.id} />
+        <input type="hidden" name="id" defaultValue={defaultValue?.id} />
         <input type="submit" value="Submit" />
       </form>
     </div>
